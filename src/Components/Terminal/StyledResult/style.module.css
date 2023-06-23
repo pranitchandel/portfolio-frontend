@@ -1,0 +1,17 @@
+.listWrapper{
+    /* border: 2px solid green; */
+    display: flex;
+flex-wrap: wrap;
+}
+
+.listItem{
+    min-width: 20%;
+}
+
+.command{
+    margin: 0px 5px 0px 10px;
+}
+.rootWrapper{
+    display: inline-block;
+    gap: 10px;
+}

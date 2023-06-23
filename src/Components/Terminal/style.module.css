@@ -1,0 +1,123 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    margin: auto;
+    transition: width 0.5s, height 0.5s;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.fullScreen{
+    height: 100vh;
+    width: 100vw;
+}
+
+.smallScreen{
+    border-radius: 12px;
+    height: 80vh;
+    width: 80vw;
+}
+
+.topbar{
+    background-color: #282734;
+    height: 25px;
+    padding-left:5px ;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.terminalBody{
+    padding:5px 5px 0px 5px;
+    text-align: start;
+    flex: 1;
+    color: #fff;
+    overflow: auto;
+}
+.terminalData{
+    /* letter-spacing: 0.8px; */
+    /* height:50px; */
+    width: inherit;
+    height: max-content;
+    overflow-x: auto;
+}
+
+.newCommand{
+    align-items: center;
+    display: flex;
+    height: 20px;
+    gap:10px;
+}
+
+.root{
+    min-width: max-content;
+}
+
+.commandInput{
+    background: none;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing:0.5px;
+}
+
+
+.listResult{
+    width: 100%;
+    height: 20px;
+}
+
+.animation{
+    width: 40%;
+    margin-left: auto;
+    overflow: hidden;
+    animation: hideIntro 1s 5s forwards;
+}
+
+@keyframes hideIntro {
+    from{opacity: 1;}
+    to{opacity: 0;height: 0;}
+}
+
+.text{
+    font-weight: 400;
+    height: 25px;
+    width: 0%;
+    overflow: hidden;
+}
+
+.experience{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.domain{
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.text1{
+    animation: textWidth 1s forwards;
+}
+
+.text2{
+    font-weight: 1000;
+    font-size: 30px;
+    height: 45px;
+    animation: textWidth 1s 1s forwards;
+}
+
+.text3{
+    animation: textWidth 1s 2s forwards;
+}
+
+.text4{
+    animation: textWidth 1s 3s forwards;
+}
+
+.text5{
+    animation: textWidth 1s 4s forwards;
+}
+@keyframes textWidth {
+    from{width: 0%;}
+    to{width:100%;}
+}
