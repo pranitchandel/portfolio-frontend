@@ -38,9 +38,10 @@ const StyledResult = ({ root, command, result, currentDirectory, error }) => {
   return (
     <div>
       <div className={styles.rootWrapper}>
-        <span>{root}</span> <span>{currentDirectory}</span>
+        <span className={styles.rootText}>{root}</span>
+        <span>{currentDirectory}</span>
+        <span className={styles.command}>{command}</span>
       </div>
-      <span className={styles.command}>{command}</span>
       {result ? (
         typeof result !== "string" ? (
           <div className={styles.listWrapper}>
@@ -64,8 +65,8 @@ const StyledResult = ({ root, command, result, currentDirectory, error }) => {
                     {data[res]?.from} - {data[res]?.to}
                   </span>
                 )}
-                {data[res]?.heading.map((head) => (
-                  <p className={styles.heading}>
+                {data[res]?.heading.map((head, index) => (
+                  <p className={styles.heading} key={index}>
                     {">"}&nbsp;
                     <span>
                       {data[res]?.showHeader &&
@@ -80,7 +81,9 @@ const StyledResult = ({ root, command, result, currentDirectory, error }) => {
                     </span>{" "}
                     <span
                       className={`${
-                        styles[rating[Object.values(head)[0].value]]
+                        styles[
+                          rating[Object.values(head)[0].value] || "contentValue"
+                        ]
                       }`}
                     >
                       {typeof Object.values(head)[0].value === "number" ? (
@@ -128,7 +131,7 @@ const StyledResult = ({ root, command, result, currentDirectory, error }) => {
           <div>{result}</div>
         )
       ) : (
-        <div> {error} </div>
+        <div className={styles.error}> {error} </div>
       )}
     </div>
   );

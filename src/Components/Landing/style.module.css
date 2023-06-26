@@ -32,3 +32,11 @@
     background:#1e1e1e ;
     color: white;
 }
+
+@media (max-width:600px) {
+    .intro{
+        width: 100vw;
+        height: 100vh;
+        padding: 10px;
+    }
+}

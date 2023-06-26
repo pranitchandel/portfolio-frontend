@@ -26,10 +26,11 @@ gap: 20px;
 }
 
 .command{
-    margin: 0px 5px 0px 10px;
+    /* margin: 0px 5px 0px 10px; */
 }
 .rootWrapper{
-    display: inline-block;
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
 
@@ -190,4 +191,33 @@ height: 100px;
     background: none;
     width: 100px;
     height: 100px;
+}
+
+@media (max-width:600px) {
+    .listItem{
+       min-width: 100%;
+    }
+
+    .rootWrapper{
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    .rootText{
+        display: inline-block;
+        max-width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 16px;
+    }
+
+    .contact .contentValue{
+        word-wrap: break-word;
+        width: 76%;
+    }
+
+    .error{
+        font-size: 14px;
+    }
 }

@@ -230,10 +230,9 @@ const Terminal = ({ closeTerminal, enterPressed }) => {
             </div>
           ))}
 
-        <div className={styles.newCommand}>
-          <span className={styles.root}>
-            {root} {currentDirectory}
-          </span>
+        <div className={styles.root}>
+          <span className={styles.rootText}>{root}</span>
+          <span className={styles.currentDirectory}>{currentDirectory}</span>
           <input
             autoComplete="off"
             ref={inputRef}

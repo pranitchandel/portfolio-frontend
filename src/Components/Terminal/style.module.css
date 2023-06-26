@@ -57,15 +57,16 @@
     overflow-x: auto;
 }
 
-.newCommand{
-    align-items: center;
+.root{
     display: flex;
-    height: 20px;
-    gap:10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
 }
 
-.root{
-    min-width: max-content;
+.rootText{
+    min-width: fit-content;
 }
 
 .commandInput{
@@ -85,8 +86,9 @@
     width: 60%;
     margin: auto;
     overflow: hidden;
+    white-space: nowrap;
     /* text-align: center; */
-    animation: hideIntro 1s 5s forwards;
+    /* animation: hideIntro 1s 5s forwards; */
     text-align: center;
 }
 
@@ -138,4 +140,52 @@
 @keyframes textWidth {
     from{width: 0%;}
     to{width:100%;}
+}
+
+@media (max-width:600px) {
+    .root {
+        gap: 5px;
+        /* font-size: 14px;    */
+    } 
+    .animation{
+        width:100%
+    }
+
+    .text{
+        font-size: 18px;
+    }
+    .text2{
+        font-size: 25px;
+    }
+
+    .domain{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .text3{
+        font-size: 16px;
+    }
+    .text4{
+        font-size: 16px;
+    }
+
+    .terminalData{
+        font-size: 18px;
+    }
+
+    .commandInput{
+        font-size: 14px;
+    }
+    .rootText{
+        display: inline;
+        min-width: 100px;
+        max-width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 16px;
+    }
+    .currentDirectory{
+        font-size: 14px;
+    }
 }
