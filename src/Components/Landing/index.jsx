@@ -5,6 +5,7 @@ import styles from "./style.module.css";
 
 const Landing = () => {
   const bodyRef = useRef();
+  // eslint-disable-next-line
   const [key, setKey] = useState("");
   const [showTerminal, setShowTerminal] = useState(false);
   const [enterPressed, setEnterPressed] = useState(false);

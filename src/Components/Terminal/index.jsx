@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { useEffect } from "react";
 import styles from "./style.module.css";
 import StyledResult from "./StyledResult";
-import { directories, data } from "../../helpers/dummyData";
+import { directories } from "../../helpers/dummyData";
 import { icons } from "../../helpers/assets";
 
 const Terminal = ({ closeTerminal, enterPressed }) => {
@@ -65,6 +65,7 @@ const Terminal = ({ closeTerminal, enterPressed }) => {
     }
 
     return () => {};
+    // eslint-disable-next-line
   }, [enterPressed]);
 
   //Always return array
@@ -193,13 +194,13 @@ const Terminal = ({ closeTerminal, enterPressed }) => {
           onClick={() => setIsFullScreen(false)}
           className={styles.topbarBtn}
         >
-          <img src={icons.minimize} width={15} height={15} />
+          <img src={icons.minimize} width={15} height={15} alt="alt" />
         </button>
         <button
           onClick={() => setIsFullScreen(true)}
           className={styles.topbarBtn}
         >
-          <img src={icons.maximize} width={15} height={15} />
+          <img src={icons.maximize} width={15} height={15} alt="alt" />
         </button>
       </div>
       <div className={styles.terminalBody}>

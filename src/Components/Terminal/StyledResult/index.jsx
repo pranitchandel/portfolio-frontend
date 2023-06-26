@@ -74,6 +74,7 @@ const StyledResult = ({ root, command, result, currentDirectory, error }) => {
                             src={icons[Object.values(head)[0].image]}
                             width={30}
                             height={30}
+                            alt="alt"
                           />
                         )}
                     </span>{" "}
