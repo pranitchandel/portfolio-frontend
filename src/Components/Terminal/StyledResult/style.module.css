@@ -1,11 +1,28 @@
 .listWrapper{
-    /* border: 2px solid green; */
+    margin: 10px 0px;
     display: flex;
 flex-wrap: wrap;
+justify-content: space-evenly;
+gap: 20px;
 }
 
 .listItem{
+    padding: 10px;
+    position: relative;
     min-width: 20%;
+    max-width:40%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.048);
+    /* animation: listItemAnime 1s linear forwards; */
+}
+
+.skills{
+    min-width: 60%;
+}
+
+@keyframes listItemAnime {
+    from{height: 0;}
+    to{height: auto; }
 }
 
 .command{
@@ -14,4 +31,163 @@ flex-wrap: wrap;
 .rootWrapper{
     display: inline-block;
     gap: 10px;
+}
+
+.hoveredListItem{
+    background-color: rgb(250, 250, 250);
+    height: 25px;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.copySuccess{
+    background-color: green;
+    color: white;
+    text-align: end;
+    padding: 2px;
+    height: 100%;
+}
+
+.image{
+    background-color: #fff;
+    padding: 10px;
+}
+
+.duration{
+    display: block;
+    margin: auto;
+    padding: 5px;
+    background-color: rgb(255, 255, 255 ,0.1);
+    width: max-content;
+}
+
+.heading{
+    /* border: 2px solid green; */
+    text-align: start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headingValueNinty{
+    animation: skillAnimeNinty 1s linear;
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    width: 90%;
+    padding-left: 10px;
+}
+.headingValueEighty{
+    animation: skillAnimeEighty 1s linear;
+    display: inline-block;
+    background-color: #fff;
+    width: 80%;
+    color: #000;
+    padding-left: 10px;
+}
+.headingValueSeventy{
+    animation: skillAnimeSeventy 1s linear;
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    width: 70%;
+    padding-left: 10px;
+}
+.headingValueSixty{
+    animation: skillAnimeSixty 1s linear;
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    width: 60%;
+    padding-left: 10px;
+}
+
+@keyframes skillAnimeSixty {
+    from{
+        width: 0;
+    }
+    to{
+        width:60%
+    }
+}
+
+@keyframes skillAnimeSeventy {
+    from{
+        width: 0;
+    }
+    to{
+        width:70%
+    }
+}
+
+@keyframes skillAnimeEighty {
+    from{
+        width: 0;
+    }
+    to{
+        width:80%
+    }
+}
+
+@keyframes skillAnimeNinty {
+    from{
+        width: 0;
+    }
+    to{
+        width:90%
+    }
+}
+
+.about{
+}
+
+.about .image{
+    /* border: 2px solid blue; */
+    padding: 0;
+    width: 150px;
+    height: 150px;
+    filter: grayscale(100%);
+}
+
+.project .image{
+padding:0;
+background: none;
+width: 100px;
+height: 100px;
+}
+
+.contact .image{
+    padding:0;
+    background: none;
+    width: 100px;
+    height: 100px;
+}
+
+.skills .image{
+    padding:0;
+    background: none;
+    width: 100px;
+    height: 100px;
+}
+
+.skill .image{
+    padding:0;
+    background: none;
+    width: 100px;
+    height: 100px;
+}
+
+
+.help .image{
+    padding:0;
+    background: none;
+    width: 100px;
+    height: 100px;
 }

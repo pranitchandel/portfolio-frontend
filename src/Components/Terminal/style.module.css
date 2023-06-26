@@ -20,10 +20,26 @@
 }
 
 .topbar{
+    display: flex;
     background-color: #282734;
-    height: 25px;
-    padding-left:5px ;
+    height: 20px;
+    padding:1px 5px;
     border-radius: 12px 12px 0px 0px;
+}
+
+.topbarBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 20px;
+    margin: 0px 5px;
+    background-color: #fff;
+    opacity: 0.8;
+    border-radius: 4px;
+}
+
+.topbarBtn:hover{
+    opacity: 1 ;
 }
 
 .terminalBody{
@@ -66,10 +82,12 @@
 }
 
 .animation{
-    width: 40%;
-    margin-left: auto;
+    width: 60%;
+    margin: auto;
     overflow: hidden;
+    /* text-align: center; */
     animation: hideIntro 1s 5s forwards;
+    text-align: center;
 }
 
 @keyframes hideIntro {
@@ -99,7 +117,10 @@
     animation: textWidth 1s forwards;
 }
 
+
 .text2{
+    background-color: #fff;
+    color: #1e1e1e;
     font-weight: 1000;
     font-size: 30px;
     height: 45px;
@@ -114,9 +135,6 @@
     animation: textWidth 1s 3s forwards;
 }
 
-.text5{
-    animation: textWidth 1s 4s forwards;
-}
 @keyframes textWidth {
     from{width: 0%;}
     to{width:100%;}
